@@ -35,7 +35,7 @@ CREATE_REPLICA
   }
 
   provisioner "local-exec" {
-    when = "destroy" 
+    when = destroy 
     command = <<DESTROY_REPLICA
 az postgres server delete \
   --name ${var.postgresql_replica_server_name} \
