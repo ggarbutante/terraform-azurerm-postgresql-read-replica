@@ -45,6 +45,6 @@ DESTROY_REPLICA
   }
 
   tags = {
-    Postgresql_Replica_Server_Name = .postgresql_replica_server_name
+    Postgresql_Replica_Server_Name = null_resource.postgresql-read-replica.postgresql_replica_server_name
   }
 }
