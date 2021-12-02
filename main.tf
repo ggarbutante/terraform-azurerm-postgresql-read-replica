@@ -44,6 +44,9 @@ az postgres server delete \
 DESTROY_REPLICA    
   }
 
+
+
+
   tags = {
     Name = "test tag"
     Postgresql_Replica_Server_Name = null_resource.postgresql-read-replica.postgresql_replica_server_name
