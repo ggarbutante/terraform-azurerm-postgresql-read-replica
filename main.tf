@@ -38,9 +38,13 @@ CREATE_REPLICA
     when = destroy 
     command = <<DESTROY_REPLICA
 az postgres server delete \
-  --name ${var.postgresql_replica_server_name} \
+  --name ${self.tags.postgresql_replica_server_name} \
   --resource-group ${var.resource_group_name} \
   --yes
 DESTROY_REPLICA    
+  }
+
+  tags = {
+    postgresql_replica_server_name = ${var.postgresql_replica_server_name} ### <-------------
   }
 }
